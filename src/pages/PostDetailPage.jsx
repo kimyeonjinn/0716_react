@@ -36,6 +36,17 @@ display: flex;
 gap: 2rem;
 `;
 
+
+const Thumbnail = styled.img`
+  width: 500px;
+  height: auto;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+
+
+`;
+
 function PostDetailPage() {
   const { postID } = useParams();
   const post = dummy_data.find(p => p.postID === parseInt(postID));
@@ -51,7 +62,7 @@ function PostDetailPage() {
         <Name>{post.name}</Name>
         <CreatedAt>∙    {post.createdAt}</CreatedAt>
       </Left>
-      
+      <Thumbnail src={post.thumbnail} alt={post.title} />
       <p>{post.content}</p>
     </PostDetail>
   );
