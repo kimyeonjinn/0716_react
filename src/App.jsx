@@ -1,31 +1,40 @@
-import { styled, ThemeProvider } from "styled-components";
+// import React from 'react';
+// import { Outlet } from 'react-router-dom';
+// import Header from './components/Header';
+// import PostDetailPage from './pages/PostDetailPage';
+// import './App.css';
 
-import { Outlet } from "react-router-dom";
 
-const Wrapper = styled.div`
-  width: 100vw;
-  background-color: white;
+// function App() {
+//   return (
+//     <>
+//       <Header />
+//       <Outlet />
+//       <PostDetailPage/>
+//     </>
+//   );
+// }
 
-  * {
-    border: 1px solid black;
-  }
-`;
 
-const Layout = () => {
-  return (
-    <>
-      <Wrapper>
-        <h3>오늘 세션도 화이팅</h3>
-        <Outlet />
-      </Wrapper>
-    </>
-  );
-};
+
+// export default App;
+// //
+
+// // src/App.js
+
+//위에 거가 잘 되긴 하는데 번째가 홈페이지에 떠서 밑에 걸로 한 번 시도함
+//오 밑에 걸로 하니까 됨 굳
+
+import React from 'react';
+import { Outlet } from 'react-router-dom';
+import Header from './components/Header';
+import './App.css';
 
 function App() {
   return (
     <>
-      <Layout />
+      <Header />
+      <Outlet />
     </>
   );
 }
